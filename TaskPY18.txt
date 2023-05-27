@@ -1,0 +1,14 @@
+N = int(input("Введите количество элементов в массиве: "))
+A = list(map(int, input("Введите элементы массива через пробел: ").split()))
+X = int(input("Введите искомое число: "))
+
+closest = None
+min_dist = float('inf')
+
+for i in A:
+    distance = abs(X - i)
+    if distance < min_dist:
+        min_dist = distance
+        closest = i
+
+print("Ближайший элемент к числу", X,"в массиве", A, ":", closest)
